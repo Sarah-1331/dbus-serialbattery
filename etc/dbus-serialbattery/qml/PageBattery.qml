@@ -94,6 +94,12 @@ MbPage {
             ]
         }
 
+        MbSwitch {
+			name: qsTr("Force discharging off")
+			bind: Utils.path(bindPrefix, "/Io/ForceDischargingOff")
+			show: item.valid
+		}
+
         MbItemValue {
             description: qsTr("Current (last 5 minutes avg.)")
             item.bind: service.path("/CurrentAvg")
